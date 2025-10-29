@@ -6,13 +6,25 @@
 3. [order_service](https://github.com/jmp-ff25/it_guru_test_task/tree/main/3.order_service) — сервис добавления товара в заказ (REST API).
 
 ## ER Диаграмма
-![ER Диаграмма схемы БД](https://github.com/jmp-ff25/it_guru_test_task/blob/main/1.design_db/scheme_db_draw.io.png)
+![ER Диаграмма схемы БД](https://raw.githubusercontent.com/jmp-ff25/it_guru_test_task/main/1.design_db/scheme_db_draw.io.png)
 
 ## Краткое описание решений
+
+### Задание 1: Проектирование схемы БД
 - Дерево категорий: adjacency list (`parent_id`) + `slug` для глобальной адресации.
 - M:N товары ↔ категории через `nomenclature_categories`.
 - M:N заказы ↔ товары через `order_items` (association object с атрибутами `quantity`, `price_at_order`).
 - Уникальные бизнес-ключи: `sku`, `slug`.
+
+### Задание 2: SQL запросы и аналитика
+- Выборки по клиентам, категориям и топам товаров с учётом исторических цен.
+- Рекурсивные CTE для работы с деревом категорий.
+- Идеи оптимизации: closure table, предагрегация, партиционирование, материализованные представления.
+
+### Задание 3: REST сервис
+- Планируемый endpoint `POST /orders/{order_id}/items` для добавления товара в заказ.
+- Валидация наличия товара, проверка остатков, фиксация цены на момент заказа.
+- Архитектура с разделением слоёв: контроллеры, сервисы, репозитории.
 
 ## Дальнейшие шаги
 - Расширение модели категорий (closure table / материализованный путь) для ускорения глубоких выборок.
