@@ -1,6 +1,8 @@
 # Проектирование схемы БД (Часть 1)
 
 ## ER Диаграмма
+Схема создана в сервисе [app.diagrams.net](https://app.diagrams.net/#G1bLuMsimx5jykM-r0WPpKInOpm8kdANOJ). Для просмотра или редактирования необходимо авторизоваться через Google Drive.
+
 ![ER Диаграмма схемы БД](https://github.com/jmp-ff25/it_guru_test_task/blob/main/1.design_db/scheme_db_draw.io.png)
 
 ## 1. Цель
