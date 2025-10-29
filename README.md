@@ -10,52 +10,52 @@
 ## ER Diagram
 ```mermaid
 erDiagram
-    CATEGORIES ||--o{ CATEGORIES : "parent_id"
-    CATEGORIES ||--o{ NOMENCLATURE_CATEGORIES : "category_id"
-    NOMENCLATURE ||--o{ NOMENCLATURE_CATEGORIES : "nomenclature_id"
-    CLIENTS ||--o{ ORDERS : "client_id"
-    ORDERS ||--o{ ORDER_ITEMS : "order_id"
-    NOMENCLATURE ||--o{ ORDER_ITEMS : "nomenclature_id"
+    CATEGORIES ||--o{ CATEGORIES : parent_id
+    CATEGORIES ||--o{ NOMENCLATURE_CATEGORIES : category_id
+    NOMENCLATURE ||--o{ NOMENCLATURE_CATEGORIES : nomenclature_id
+    CLIENTS ||--o{ ORDERS : client_id
+    ORDERS ||--o{ ORDER_ITEMS : order_id
+    NOMENCLATURE ||--o{ ORDER_ITEMS : nomenclature_id
 
     CATEGORIES {
-        id PK "UniqueID"
-        name "Название категории"
-        parent_id FK "Родительская категория"
-        slug UK "URL-идентификатор"
+        int id PK
+        string name
+        int parent_id FK
+        string slug UK
     }
 
     NOMENCLATURE {
-        id PK "UniqueID"
-        sku UK "Артикул товара"
-        name "Название товара"
-        price "Текущая цена"
-        quantity "Остаток на складе"
-        updated_at "Время обновления"
+        int id PK
+        string sku UK
+        string name
+        decimal price
+        int quantity
+        datetime updated_at
     }
 
     NOMENCLATURE_CATEGORIES {
-        nomenclature_id FK "ID товара"
-        category_id FK "ID категории"
+        int nomenclature_id FK
+        int category_id FK
     }
 
     CLIENTS {
-        id PK "UniqueID"
-        name "Имя клиента"
-        address "Адрес"
+        int id PK
+        string name
+        string address
     }
 
     ORDERS {
-        id PK "UniqueID"
-        client_id FK "ID клиента"
-        created_at "Дата создания"
-        status "Статус заказа"
+        int id PK
+        int client_id FK
+        datetime created_at
+        string status
     }
 
     ORDER_ITEMS {
-        order_id FK "ID заказа"
-        nomenclature_id FK "ID товара"
-        quantity "Количество"
-        price_at_order "Цена на момент заказа"
+        int order_id FK
+        int nomenclature_id FK
+        int quantity
+        decimal price_at_order
     }
 ```
 
