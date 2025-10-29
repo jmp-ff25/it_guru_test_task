@@ -19,43 +19,43 @@ erDiagram
 
     CATEGORIES {
         bigint id PK
-        text name
+        string name
         bigint parent_id FK
-        text slug UNIQUE
+        string slug UK "UNIQUE"
     }
 
     NOMENCLATURE {
         bigint id PK
-        text sku UNIQUE
-        text name
-        numeric price
+        string sku UK "UNIQUE"
+        string name
+        decimal price
         int quantity
-        timestamptz updated_at
+        timestamp updated_at
     }
 
     NOMENCLATURE_CATEGORIES {
-        bigint nomenclature_id FK PK
-        bigint category_id FK PK
+        bigint nomenclature_id FK
+        bigint category_id FK
     }
 
     CLIENTS {
         bigint id PK
-        text name
-        text address
+        string name
+        string address
     }
 
     ORDERS {
         bigint id PK
         bigint client_id FK
-        timestamptz created_at
-        text status
+        timestamp created_at
+        string status
     }
 
     ORDER_ITEMS {
-        bigint order_id FK PK
-        bigint nomenclature_id FK PK
+        bigint order_id FK
+        bigint nomenclature_id FK
         int quantity
-        numeric price_at_order
+        decimal price_at_order
     }
 ```
 
