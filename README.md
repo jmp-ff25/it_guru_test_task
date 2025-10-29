@@ -6,6 +6,8 @@
 3. [order_service](https://github.com/jmp-ff25/it_guru_test_task/tree/main/3.order_service) — сервис добавления товара в заказ (REST API).
 
 ## ER Диаграмма
+Схема создана в сервисе [app.diagrams.net](https://app.diagrams.net/#G1bLuMsimx5jykM-r0WPpKInOpm8kdANOJ). Для просмотра или редактирования необходимо авторизоваться через Google Drive.
+
 ![ER Диаграмма схемы БД](https://raw.githubusercontent.com/jmp-ff25/it_guru_test_task/main/1.design_db/scheme_db_draw.io.png)
 
 ## Краткое описание решений
