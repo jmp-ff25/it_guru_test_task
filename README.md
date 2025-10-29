@@ -10,52 +10,52 @@
 ## ER Diagram
 ```mermaid
 erDiagram
-    CATEGORIES ||--o{ CATEGORIES : parent        
-    CATEGORIES ||--o{ NOMENCLATURE_CATEGORIES : has
-    NOMENCLATURE ||--o{ NOMENCLATURE_CATEGORIES : has
-    CLIENTS ||--o{ ORDERS : places
-    ORDERS ||--o{ ORDER_ITEMS : contains
-    NOMENCLATURE ||--o{ ORDER_ITEMS : listed
+    CATEGORIES ||--o{ CATEGORIES : "parent_id"
+    CATEGORIES ||--o{ NOMENCLATURE_CATEGORIES : "category_id"
+    NOMENCLATURE ||--o{ NOMENCLATURE_CATEGORIES : "nomenclature_id"
+    CLIENTS ||--o{ ORDERS : "client_id"
+    ORDERS ||--o{ ORDER_ITEMS : "order_id"
+    NOMENCLATURE ||--o{ ORDER_ITEMS : "nomenclature_id"
 
     CATEGORIES {
-        bigint id PK
-        string name
-        bigint parent_id FK
-        string slug UK "UNIQUE"
+        id PK "UniqueID"
+        name "Название категории"
+        parent_id FK "Родительская категория"
+        slug UK "URL-идентификатор"
     }
 
     NOMENCLATURE {
-        bigint id PK
-        string sku UK "UNIQUE"
-        string name
-        decimal price
-        int quantity
-        timestamp updated_at
+        id PK "UniqueID"
+        sku UK "Артикул товара"
+        name "Название товара"
+        price "Текущая цена"
+        quantity "Остаток на складе"
+        updated_at "Время обновления"
     }
 
     NOMENCLATURE_CATEGORIES {
-        bigint nomenclature_id FK
-        bigint category_id FK
+        nomenclature_id FK "ID товара"
+        category_id FK "ID категории"
     }
 
     CLIENTS {
-        bigint id PK
-        string name
-        string address
+        id PK "UniqueID"
+        name "Имя клиента"
+        address "Адрес"
     }
 
     ORDERS {
-        bigint id PK
-        bigint client_id FK
-        timestamp created_at
-        string status
+        id PK "UniqueID"
+        client_id FK "ID клиента"
+        created_at "Дата создания"
+        status "Статус заказа"
     }
 
     ORDER_ITEMS {
-        bigint order_id FK
-        bigint nomenclature_id FK
-        int quantity
-        decimal price_at_order
+        order_id FK "ID заказа"
+        nomenclature_id FK "ID товара"
+        quantity "Количество"
+        price_at_order "Цена на момент заказа"
     }
 ```
 
