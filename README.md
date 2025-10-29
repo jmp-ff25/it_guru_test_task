@@ -6,7 +6,7 @@
 3. [order_service](https://github.com/jmp-ff25/it_guru_test_task/tree/main/3.order_service) — сервис добавления товара в заказ (REST API).
 
 ## ER Диаграмма
-![ER Диаграмма схемы БД](https://drive.google.com/uc?export=view&id=1bLuMsimx5jykM-r0WPpKInOpm8kdANOJ)
+![ER Диаграмма схемы БД](https://github.com/jmp-ff25/it_guru_test_task/blob/main/1.design_db/scheme_db_draw.io.png)
 
 ## Краткое описание решений
 - Дерево категорий: adjacency list (`parent_id`) + `slug` для глобальной адресации.
