@@ -15,11 +15,9 @@
 
 ## Структура репозитория
 
-| **Раздел** | **Описание** | **Ссылка** |
-|------------|--------------|-------------|
-| **1. design_db** | Проектирование схемы БД и обоснование архитектурных решений | [Перейти →](https://github.com/jmp-ff25/it_guru_test_task/tree/main/1.design_db) |
-| **2. write_sql_queries** | Примерные SQL‑запросы к спроектированной схеме (аналитика и оптимизация) | [Перейти →](https://github.com/jmp-ff25/it_guru_test_task/tree/main/2.write_sql_queries) |
-| **3. order_service** | Сервис добавления товара в заказ (REST API) | [Перейти →](https://github.com/jmp-ff25/it_guru_test_task/tree/main/3.order_service) |
+1. **[design_db](https://github.com/jmp-ff25/it_guru_test_task/tree/main/1.design_db)** — проектирование схемы БД и обоснование архитектурных решений
+2. **[write_sql_queries](https://github.com/jmp-ff25/it_guru_test_task/tree/main/2.write_sql_queries)** — примерные SQL‑запросы к спроектированной схеме (аналитика и оптимизация)
+3. **[order_service](https://github.com/jmp-ff25/it_guru_test_task/tree/main/3.order_service)** — сервис добавления товара в заказ (REST API)
 
 ## ER Диаграмма
 
@@ -63,15 +61,5 @@
 - **Endpoint:** `POST /orders/{order_id}/items` для добавления товара в заказ
 - **Валидация:** наличие товара, проверка остатков, фиксация цены на момент заказа  
 - **Архитектура:** разделение слоёв (контроллеры, сервисы, репозитории)
-
----
-
-<div align="center">
-
-### **Готово к презентации и обсуждению!**
-
-*Каждое задание содержит подробную документацию с обоснованием принятых решений*
-
-</div>
 
 
