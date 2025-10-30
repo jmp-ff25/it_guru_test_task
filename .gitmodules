@@ -1,0 +1,3 @@
+[submodule "3.order_service"]
+	path = 3.order_service
+	url = git@github.com:jmp-ff25/it_guru_order_service.git
