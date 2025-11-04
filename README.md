@@ -9,7 +9,7 @@
 
 [![Database Design](https://img.shields.io/badge/📋_Задание_1-Проектирование_БД-blue?style=for-the-badge)](https://github.com/jmp-ff25/it_guru_test_task/tree/main/1.design_db)
 [![SQL Queries](https://img.shields.io/badge/🔍_Задание_2-SQL_Запросы-green?style=for-the-badge)](https://github.com/jmp-ff25/it_guru_test_task/tree/main/2.write_sql_queries)
-[![REST Service](https://img.shields.io/badge/⚡_Задание_3-REST_Сервис-orange?style=for-the-badge)](https://github.com/jmp-ff25/it_guru_test_task?tab=readme-ov-file)
+[![REST Service](https://img.shields.io/badge/⚡_Задание_3-REST_Сервис-orange?style=for-the-badge)](https://github.com/jmp-ff25/it_guru_order_service)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 1. **[design_db](https://github.com/jmp-ff25/it_guru_test_task/tree/main/1.design_db)** — проектирование схемы БД и обоснование архитектурных решений
 2. **[write_sql_queries](https://github.com/jmp-ff25/it_guru_test_task/tree/main/2.write_sql_queries)** — примерные SQL‑запросы к спроектированной схеме (аналитика и оптимизация)
-3. **[order_service](https://github.com/jmp-ff25/it_guru_test_task?tab=readme-ov-file)** — сервис добавления товара в заказ (REST API)
+3. **[order_service](https://github.com/jmp-ff25/it_guru_order_service)** — сервис добавления товара в заказ (REST API)
 
 ## ER Диаграмма
 
@@ -54,7 +54,7 @@
 
 ---
 
-### [Задание 3: REST сервис](https://github.com/jmp-ff25/it_guru_test_task?tab=readme-ov-file)
+### [Задание 3: REST сервис](https://github.com/jmp-ff25/it_guru_order_service)
 
 **Планируемая архитектура API:**
 
